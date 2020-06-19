@@ -1,0 +1,90 @@
+body {
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+}
+div,
+.app {
+  display: flex;
+}
+.caixa {
+  width: 100%;
+  flex-direction: column;
+  background-color: white;
+  grid-gap: 1em;
+  padding: 2%;
+  box-shadow: 0px 0px 3px #777;
+  margin: 15px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1em;
+}
+.cx2 {
+  margin: 1%;
+  flex-direction: column;
+  border: 2px solid whitesmoke;
+  padding: 0%;
+  flex: 1;
+  height: 300px;
+}
+.cx2-top {
+  background-color: whitesmoke;
+}
+
+select {
+  border-radius: 20px;
+  border: 2px solid whitesmoke;
+  width: 90%;
+  margin: 20px;
+  height: 3em;
+  padding: 0px 15px;
+  color: rgb(153, 153, 153);
+}
+input {
+  border-radius: 20px;
+  border: 2px solid whitesmoke;
+  width: 90%;
+  height: 3em;
+  padding: 0px 15px;
+  margin: 10px;
+  color: rgb(153, 153, 153);
+}
+
+button {
+  background-color: #017459; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 43px;
+  margin-right: 10px;
+}
+
+img {
+  margin: 10px 0px 10px 20px;
+}
+
+label {
+  margin: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table td,
+tr {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #3376ce;
+  color: white;
+}

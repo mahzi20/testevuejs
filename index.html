@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width/=device-width, initial-scale=1.0" />
+    <title>Vue js</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="caixa">
+        <div class="item">
+          <label><b>{{ titulo }}</b></label>
+          <button v-on:click="addRegra">Publicar</button>
+        </div>
+        <div class="item">
+          <input
+            type="text"
+            v-model="tituloRegra"
+            placeholder="Título da Regra ex: Cobrança Leads Plano Mensal"
+          />
+          <input
+            type="text"
+            v-model="descricaoRegra"
+            placeholder="Descrição da Regra (Opcional) ex: o objetivo dessa regra é..."
+          />
+        </div>
+        <div class="item">
+          <div class="cx2">
+            <div class="cx2-top">
+              <img v-bind:src="imgConecte" alt="" width="15" height="15" />
+              <label> Se</label>
+            </div>
+            <select v-model="seOpcao">
+              <option value="" selected>Selecione uma Opção</option>
+              <option>Se Opção 1</option>
+              <option>Se Opção 2</option>
+            </select>
+          </div>
+
+          <div class="cx2">
+            <div class="cx2-top">
+              <img v-bind:src="imgConecte" alt="" width="15" height="15" />
+              <label> Faça</label>
+            </div>
+            <div>
+              <select v-model="facaOpcao">
+                <option value="" selected>Selecione uma Opção</option>
+                <option>Faça Opção 1</option>
+                <option>Faça Opção 2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="cx2">
+            <div class="cx2-top">
+              <img v-bind:src="imgCalendario" alt="" width="15" height="15" />
+              <label> Quando</label>
+            </div>
+            <div>
+              <input type="date" v-model="quandoOpcao" />
+            </div>
+          </div>
+        </div>
+
+        <div class="tabela">
+          <table class="table">
+            <thead>
+              <tr>
+                <th v-for="colunm in colunas">
+                  {{colunm}}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="regra in regra">
+                <td v-for="colunm in colunas">
+                  {{regra[colunm]}}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
